@@ -1,0 +1,59 @@
+.bg {
+    background-color: rgb(43, 69, 99) !important;
+    color: aliceblue !important;
+  }
+
+  .nav-link {
+  
+    color: rgb(255 255 255) !important;
+   ;
+}
+.hide-dropdown-arrow .dropdown-toggle::after {
+    display: none;
+}
+a:hover {
+    background-color: #536e8d !important;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    background-color: #333;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-content {
+    color: #fff;
+}
+
+.custom-icon {
+    padding: 12px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .custom-icon:hover {
+    background-color: rgb(85, 96, 119);
+    padding: 12px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+.Container{
+    margin-top: 55px 
+}
+.left-side{
+  height: 50px;
+  height: 500px;
+  background-color : rgb(15 36 61);
+  overflow-y: auto;
+}
