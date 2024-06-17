@@ -1,5 +1,8 @@
+body{
+  overflow: hidden !important;
+}
 .bg {
-    background-color: rgb(43, 69, 99) !important;
+  background-color: rgb(43, 69, 99) !important;
     color: aliceblue !important;
   }
 
@@ -56,4 +59,31 @@ a:hover {
   height: 500px;
   background-color : rgb(15 36 61);
   overflow-y: auto;
+}
+.row>* {
+  padding-right: calc(var(--bs-gutter-x)* .0) !important;
+   padding-left: calc(var(--bs-gutter-x)* .0) !important; 
+}
+
+
+.sticky-div {
+  height: 50px;
+  background-color: #183556;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.card-container {
+  height: 100vh; /* 100% of viewport height */
+  width: 100%; /* 100% of parent container */
+  overflow-y: auto; /* Enable vertical scroll bar if content overflows */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.card-content {
+  height: 100%; /* Occupy full height of parent container */
 }
