@@ -10,10 +10,11 @@ import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import SideBar from "../Components/SideBar.tsx";
-import logo from "../images/logo2.jpg";
+import logo from "../images/SQ1Logo-White.png";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home.tsx";
 import Browse from "./Browse.tsx";
+import ImageSlider from "./ImageDetail.jsx";
 
 export default function NavBar() {
   return (
@@ -23,7 +24,7 @@ export default function NavBar() {
         <Navbar expand="lg" className="bg fixed-top tr">
           <Container className="nav-content" fluid>
             <Navbar.Brand as={Link} to="/">
-              <img
+              <img 
                 src={logo}
                 width="90"
                 height="40"
@@ -60,7 +61,7 @@ export default function NavBar() {
                   <NavDropdown.Item>Francis(French)</NavDropdown.Item>
                   <NavDropdown.Item>كوردى(Kurdish)</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link as={Link} to="/login"><FontAwesomeIcon icon={faAngleRight} /> Logii Sisse</Nav.Link>
+                <Nav.Link as={Link} to="/login"><FontAwesomeIcon icon={faAngleRight} /> Login </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -70,6 +71,7 @@ export default function NavBar() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/browse" element={<SideBar />} />
+            <Route path="/image/:index" element={<ImageSlider  />} />
 
           </Routes>
         </Container>

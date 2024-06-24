@@ -1,73 +1,96 @@
-body{
+:root {
+  --primary-bg-color: rgb(43, 69, 99);
+  --primary-color: aliceblue;
+  --nav-link-color: rgb(255, 255, 255);
+  --hover-bg-color: #536e8d;
+  --sidebar-bg-color: #333;
+  --sidebar-content-color: #fff;
+  --custom-icon-bg-color: #1f4e71;
+  --custom-icon-hover-bg-color: rgb(85, 96, 119);
+  --left-side-bg-color: rgb(15, 36, 61);
+  --sticky-div-bg-color: #183556;
+  --image-footer-bg-color: rgba(9, 9, 9, 0.39);
+  --image-footer-color: rgb(255, 255, 255);
+  --accordion-bg-color: red;
+  --strong-color:#ccd2d7;
+}
+
+body {
   overflow: hidden !important;
 }
-.bg {
-  background-color: rgb(43, 69, 99) !important;
-    color: aliceblue !important;
-  }
 
-  .nav-link {
-  
-    color: rgb(255 255 255) !important;
-   ;
+.bg {
+  background-color: var(--primary-bg-color) !important;
+  color: var(--primary-color) !important;
 }
+
+.nav-link {
+  color: var(--nav-link-color) !important;
+}
+
 .hide-dropdown-arrow .dropdown-toggle::after {
-    display: none;
+  display: none;
 }
+
 a:hover {
-    background-color: #536e8d !important;
+  background-color: var(--hover-bg-color) !important;
 }
+
 .sidebar {
-    position: fixed;
-    top: 0;
-    height: 100%;
-    background-color: #333;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  background-color: var(--sidebar-bg-color);
 }
 
 .sidebar.open {
-    right: 0;
+  right: 0;
 }
 
 .sidebar-content {
-    color: #fff;
+  color: var(--sidebar-content-color);
 }
 
 .custom-icon {
-    padding: 12px;
-    color: white;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: #1f4e71;
-  }
-  .custom-icon:hover {
-    background-color: rgb(85, 96, 119);
-    padding: 12px;
-    color: white;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-.Container{
-    margin-top: 55px 
-}
-.left-side{
-  background-color : rgb(15 36 61);
-  overflow-y: auto;
-}
-.row>* {
-  padding-right: calc(var(--bs-gutter-x)* .0) !important;
-   padding-left: calc(var(--bs-gutter-x)* .0) !important; 
+  padding: 12px;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #183556;
 }
 
+.custom-icon:hover {
+  background-color: var(--custom-icon-hover-bg-color);
+  padding: 12px;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Container {
+  margin-top: 55px;
+}
+
+.left-side {
+  background-color: var(--left-side-bg-color);
+  overflow-y: auto;
+ height: 93vh;
+}
+
+/* .row > * {
+  padding-right: calc(var(--bs-gutter-x) * 0) !important;
+  padding-left: calc(var(--bs-gutter-x) * 0) !important;
+} */
 
 .sticky-div {
   height: 50px;
-  background-color: #183556;
+  background-color: var(--sticky-div-bg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,7 +100,8 @@ a:hover {
 }
 
 .card-container {
-  height: 100vh; /* 100% of viewport height */
+  background-color: #d9dadf;
+  height: 90vh; /* 100% of viewport height */
   width: 100%; /* 100% of parent container */
   overflow-y: auto; /* Enable vertical scroll bar if content overflows */
   padding: 20px; /* Adjust padding as needed */
@@ -86,15 +110,233 @@ a:hover {
 .card-content {
   height: 100%; /* Occupy full height of parent container */
 }
-.Image_footer {
 
+.Image_footer {
   height: 57px;
-  background-color: rgba(9, 9, 9, 0.39);
+  background-color: var(--image-footer-bg-color);
   position: absolute;
   bottom: 0;
   left: 0;
-  color: rgb(255, 255, 255);
+  color: var(--image-footer-color);
   font-size: 14px;
-  width: 100%;
+  width: 98%;
   padding: 3px;
+}
+
+.css-1086bdv-MuiPaper-root-MuiAccordion-root {
+  background-color:var(--left-side-bg-color) !important;
+  color: rgb(156 169 183) !important;
+
+}
+.css-i4bv87-MuiSvgIcon-root {
+  color: azure !important;
+}
+
+.Accordion .MuiAccordionSummary-root {
+  border-bottom: 1px solid white;
+}
+strong{
+  color: var(--strong-color);
+}
+#stickybar-search {
+  position: relative;
+  width: 100%;
+}
+
+.ui.category.search.item .ui.icon.input {
+  display: flex;
+  align-items: center;
+}
+
+.ui.category.search.item .prompt {
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+
+.search_dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.search_dropdown.visible {
+  display: block;
+}
+
+.search_dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search_dropdown li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search_dropdown li:hover {
+  background: #f1f1f1;
+}
+
+.search_dropdown .show-history,
+.search_dropdown .advance-search {
+  font-weight: bold;
+}
+.ui.category.search.item .search-btn {
+  color: white;
+  background-color: #406886;
+  border: none;
+  padding: 7px;
+  margin-left: -33px;
+  border-radius: 5px;
+}
+.ActiveFilter{
+  color: #a3a6b3;
+  height: 45px;
+  display: flex;
+  justify-content:space-between;
+  background-color: #406886;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+.custom-icon-ActiveFilter {
+
+  color: #a3a6b3;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-color: rgb(255 255 255) !important;
+}
+.CardFilter{
+  display: flex;
+  justify-content: space-between;
+  background-color: #1f4e71;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.Count{
+  color: azure;
+  background-color: #9b9da9;
+  margin-top: -10px;
+  margin-right: -12px;
+  border-radius: 0px 5px 0px 5px;
+  padding: 5px;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  width: 339px !important;
+
+}
+
+.image-slider-container
+{
+   min-height: 100vh;
+}
+
+
+.image-slider-container .image-thumbnails {
+  display: flex;
+  margin-top: 100px;
+  gap: 10px;
+}
+
+.image-slider-container .image-thumbnails img {
+  width: 100px; /* حجم الصور المصغرة */
+  height: 100px;
+  object-fit: cover; /* تصغير الصور لتناسب الحاوية */
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.image-slider-container .image-thumbnails img.active {
+  border-color: blue;
+}
+.image-thumbnails-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.image-thumbnails {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.image-buttons {
+  position: relative;
+  display:flex;
+  justify-content: space-around;
+
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-btn {
+  left: 10px; /* تعديل هذا الرقم لضبط موضع الزر على اليسار */
+}
+
+.next-btn {
+  right: 10px;
+}
+.slick-dots li button:before {
+  display: none;
+}
+.thumbnail-container {
+  position: relative;
+  display: inline-block;
+}
+
+.thumbnail {
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 10px; /* يمكنك تعديل هذه القيم لضبط الموضع */
+  right: 10px; /* يمكنك تعديل هذه القيم لضبط الموضع */
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية نصف شفافة */
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px; /* حجم الخط */
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.zoomed-in {
+  transform: scale(1.2); /* Increase the scale for zoom-in effect */
+  cursor: zoom-out; /* Change cursor to indicate zoom-out */
+}
+.image-container {
+  transition: transform 0.3s ease;
+}
+
+.image-container.zoomed-in {
+  transform: scale(1.5); /* تكبير الصورة إلى 1.5 مرة حجمها الأصلي */
 }
