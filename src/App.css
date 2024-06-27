@@ -12,7 +12,7 @@
   --image-footer-bg-color: rgba(9, 9, 9, 0.39);
   --image-footer-color: rgb(255, 255, 255);
   --accordion-bg-color: red;
-  --strong-color:#ccd2d7;
+  --strong-color: #ccd2d7;
 }
 
 body {
@@ -80,13 +80,10 @@ a:hover {
 .left-side {
   background-color: var(--left-side-bg-color);
   overflow-y: auto;
- height: 93vh;
+  height: 93vh;
 }
 
-/* .row > * {
-  padding-right: calc(var(--bs-gutter-x) * 0) !important;
-  padding-left: calc(var(--bs-gutter-x) * 0) !important;
-} */
+
 
 .sticky-div {
   height: 50px;
@@ -101,14 +98,14 @@ a:hover {
 
 .card-container {
   background-color: #d9dadf;
-  height: 90vh; /* 100% of viewport height */
-  width: 100%; /* 100% of parent container */
-  overflow-y: auto; /* Enable vertical scroll bar if content overflows */
-  padding: 20px; /* Adjust padding as needed */
+  height: 90vh;
+  width: 100%;
+  overflow-y: auto;
+  padding: 20px;
 }
 
 .card-content {
-  height: 100%; /* Occupy full height of parent container */
+  height: 100%;
 }
 
 .Image_footer {
@@ -124,10 +121,11 @@ a:hover {
 }
 
 .css-1086bdv-MuiPaper-root-MuiAccordion-root {
-  background-color:var(--left-side-bg-color) !important;
+  background-color: var(--left-side-bg-color) !important;
   color: rgb(156 169 183) !important;
 
 }
+
 .css-i4bv87-MuiSvgIcon-root {
   color: azure !important;
 }
@@ -135,9 +133,11 @@ a:hover {
 .Accordion .MuiAccordionSummary-root {
   border-bottom: 1px solid white;
 }
-strong{
+
+strong {
   color: var(--strong-color);
 }
+
 #stickybar-search {
   position: relative;
   width: 100%;
@@ -189,6 +189,7 @@ strong{
 .search_dropdown .advance-search {
   font-weight: bold;
 }
+
 .ui.category.search.item .search-btn {
   color: white;
   background-color: #406886;
@@ -197,16 +198,18 @@ strong{
   margin-left: -33px;
   border-radius: 5px;
 }
-.ActiveFilter{
+
+.ActiveFilter {
   color: #a3a6b3;
   height: 45px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   background-color: #406886;
   padding: 10px;
   margin-top: 10px;
   border-radius: 2px;
 }
+
 .custom-icon-ActiveFilter {
 
   color: #a3a6b3;
@@ -217,10 +220,12 @@ strong{
   cursor: pointer;
 
 }
+
 .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
   border-color: rgb(255 255 255) !important;
 }
-.CardFilter{
+
+.CardFilter {
   display: flex;
   justify-content: space-between;
   background-color: #1f4e71;
@@ -229,7 +234,8 @@ strong{
   cursor: pointer;
   margin-bottom: 5px;
 }
-.Count{
+
+.Count {
   color: azure;
   background-color: #9b9da9;
   margin-top: -10px;
@@ -237,27 +243,26 @@ strong{
   border-radius: 0px 5px 0px 5px;
   padding: 5px;
 }
+
 .css-6hp17o-MuiList-root-MuiMenu-list {
   width: 339px !important;
 
 }
 
-.image-slider-container
-{
-   min-height: 100vh;
+.image-slider-container {
+  min-height: 100vh;
 }
 
 
 .image-slider-container .image-thumbnails {
   display: flex;
-  margin-top: 100px;
   gap: 10px;
 }
 
 .image-slider-container .image-thumbnails img {
-  width: 100px; /* حجم الصور المصغرة */
+  width: 100px;
   height: 100px;
-  object-fit: cover; /* تصغير الصور لتناسب الحاوية */
+  object-fit: cover;
   border: 2px solid transparent;
   cursor: pointer;
   transition: border-color 0.3s ease;
@@ -266,6 +271,7 @@ strong{
 .image-slider-container .image-thumbnails img.active {
   border-color: blue;
 }
+
 .image-thumbnails-container {
   width: 100%;
   overflow-x: auto;
@@ -275,9 +281,10 @@ strong{
   display: flex;
   flex-wrap: nowrap;
 }
+
 .image-buttons {
   position: relative;
-  display:flex;
+  display: flex;
   justify-content: space-around;
 
 }
@@ -290,15 +297,17 @@ strong{
 }
 
 .prev-btn {
-  left: 10px; /* تعديل هذا الرقم لضبط موضع الزر على اليسار */
+  left: 10px;
 }
 
 .next-btn {
   right: 10px;
 }
+
 .slick-dots li button:before {
   display: none;
 }
+
 .thumbnail-container {
   position: relative;
   display: inline-block;
@@ -310,14 +319,15 @@ strong{
 
 .overlay-text {
   position: absolute;
-  top: 10px; /* يمكنك تعديل هذه القيم لضبط الموضع */
-  right: 10px; /* يمكنك تعديل هذه القيم لضبط الموضع */
-  background-color: rgba(0, 0, 0, 0.5); /* خلفية نصف شفافة */
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 5px;
   border-radius: 5px;
-  font-size: 12px; /* حجم الخط */
+  font-size: 12px;
 }
+
 .image-container {
   position: relative;
   overflow: hidden;
@@ -329,14 +339,97 @@ strong{
   transition: transform 0.3s ease;
 }
 
-.zoomed-in {
-  transform: scale(1.2); /* Increase the scale for zoom-in effect */
-  cursor: zoom-out; /* Change cursor to indicate zoom-out */
+
+
+.page-selection-preview {
+  overflow: hidden;
+  border: 1px solid #ddd;
+  position: relative;
 }
-.image-container {
+
+.page-selection-preview img {
   transition: transform 0.3s ease;
 }
 
-.image-container.zoomed-in {
-  transform: scale(1.5); /* تكبير الصورة إلى 1.5 مرة حجمها الأصلي */
+.controls {
+text-align: center;
+  margin-top: 1rem !important;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+::-webkit-scrollbar {
+  width: 5px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background:  var(--primary-bg-color); 
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+  background-color: #2b4563 !important;
+  width: 450px !important;
+}
+.ImageInfo {
+  position: relative; 
+  display: flex;
+  width: 100px; 
+  height: 100px; 
+}
+
+
+
+
+.InfoIcon{
+  color: white;
+  background-color:  var(--primary-bg-color);
+  margin: 5px;
+  padding: 15px;
+  cursor: pointer !important;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 20px;
+}
+.btn{
+  margin-right: 18px !important;
+}
+.btn-secondary {
+  --bs-btn-bg: #2b4563 !important;
+}
+
+
+
+
+
+
+/* src/Components/ImageTextExtractor.css */
+.image-container {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ccc;
+  margin: auto;
+}
+
+.image-container canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

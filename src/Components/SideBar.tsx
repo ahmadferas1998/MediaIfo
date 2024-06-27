@@ -119,10 +119,10 @@ export default function NavBar() {
     setLayout(eventKey);
   };
   const [showCol, setShowCol] = useState(true);
-  const [colSize, setColSize] = useState("col-md-9");
+  const [colSize, setColSize] = useState("col-md-10");
   const handleFilterClick = () => {
     setShowCol(!showCol);
-    setColSize(showCol ? "col-md-12" : "col-md-9");
+    setColSize(showCol ? "col-md-12" : "col-md-10");
   };
 
   //#region  Serch Text Box Section
@@ -168,7 +168,7 @@ export default function NavBar() {
       <Container fluid className="Container">
         <div className="row">
           {showCol ? (
-            <div className="col-md-3 left-side">
+            <div className="col-md-2 left-side">
 
               <div className="row" style={{ marginTop: "10px" }}>
                 <div id="stickybar-search" className="ui category search item">
@@ -325,7 +325,7 @@ export default function NavBar() {
             </div>
           ) : null}
 
-          <div className={`col-md-${showCol ? "9" : "12"}`} style={{ padding: "0px" }}>
+          <div className={`col-md-${showCol ? "10" : "12"}`} style={{ padding: "0px" }}>
             <div className="sticky-div">
               <FontAwesomeIcon
                 className="custom-icon"

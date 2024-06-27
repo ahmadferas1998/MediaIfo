@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./Home.tsx";
 import Browse from "./Browse.tsx";
 import ImageSlider from "./ImageDetail.jsx";
+import ImageTextExtractor from "./ImageInfo.jsx";
 
 export default function NavBar() {
   return (
@@ -72,6 +73,7 @@ export default function NavBar() {
             <Route path="/" element={<Home />} />
             <Route path="/browse" element={<SideBar />} />
             <Route path="/image/:index" element={<ImageSlider  />} />
+            <Route path="/ImageTextExtractor" element={<ImageTextExtractor />} />
 
           </Routes>
         </Container>

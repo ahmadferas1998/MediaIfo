@@ -21,7 +21,7 @@ const GridViewLayout = ({ images }) => {
                     src={image.src}
                     alt={image.alt}
                     rounded
-                    style={{ width: "100%", height: "300px", paddingRight: "5px", cursor: 'pointer' }}
+                    style={{ width: "100%", height: "200px", paddingRight: "5px", cursor: 'pointer' }}
                     onClick={() => handleImageClick(image.id)}
                   />
                   <div className="Image_footer">
