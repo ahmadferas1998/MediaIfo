@@ -6,7 +6,7 @@ import ImageTextExtractor from "./ImageInfo";
 export default function Home() {
   return (
 <>
-<ImageTextExtractor />
+{/* <ImageTextExtractor /> */}
 </>
   );
 }
